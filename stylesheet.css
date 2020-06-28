@@ -1,3 +1,7 @@
+body{
+background-color: #aa9fb350;
+}
+
 .themed-grid-col {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -26,6 +30,46 @@
     background-color: #745681c4;
     color: #ffffff;
   }
+
+  #button1 {
+      border-radius: 5px;
+      border: 1px solid #581375e8;
+      padding: 10px;
+      width: 200px;
+      background-color: #581375e8;
+      color: #ffffff;
+  }
+
+  #button1:hover {
+    background-color: #5813755e;
+}
+
+  #button2 {
+    border-radius: 5px;
+    border: 1px solid hsla(133, 76%, 20%, 0.91);
+    padding: 10px;
+    width: 200px;
+    background-color: hsla(133, 76%, 20%, 0.91);
+    color: #ffffff;
+  }
+
+  #button2:hover {
+      background-color: hsla(133, 76%, 20%, 0.418);
+  }
+
+  #display {
+    border-radius: 5px;
+    border: 0px;
+    width: 75%;
+  }
+
+  #slider {
+      width: 50%;
+  }
+.previous_passwords {
+    margin-bottom: 100px;
+}
+
   
 /* $theme-colors: (
     "primary": #521751,

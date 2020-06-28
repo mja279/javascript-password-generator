@@ -28,21 +28,9 @@
     <div class="row mb-3">
 
       <div class="col-md-8 themed-grid-col mx-auto">
-      <div class="pb-3">
-        <!-- Split dropright button -->
-        <div class="btn-group dropright">
-          <button type="button" class="btn btn-secondary">
-          Password Length
-          </button>
-          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropright</span>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">5 (Weak)</a>
-            <a class="dropdown-item" href="#">16 (Strong)</a>
-            <a class="dropdown-item" href="#">27 (Wowza)</a>
-          </div>
-        </div>
+      <div class="pb-3"> Select the length for strength:  
+        <br />
+        <input type="range" min="0" max="50" name="slider" id="slider">
       </div>
 <!-- Row 1 -->
       <div class="row">
@@ -85,13 +73,15 @@
       </div>
 <!-- Row 4; Copy to Clipboard Button -->
       <br />
-      <div class="btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-          <input type="checkbox" checked> Copy to Clipboard
-        </label>
-      </div>
+      <button id="button2" onclick="copyPassword()">Copy to Clipboard</button>
     </div>
-    <div class="col-md-4 themed-grid-col">generated pw will go here
+
+<!-- Generator -->
+    <div class="col-md-4 themed-grid-col">Random Password:
+      <input type="text" id="display">
+      <br />
+      <br />
+      <button id="button1" onclick="generate()">Generate!</button>
       <br />
       <div id="lastNums"></div>
     </div>
