@@ -14,3 +14,11 @@ body {
     font-size: 14px;
     background: black;
 }  
+
+.content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: blueviolet;
+    padding: 20px;
+    width: 100%;
+}

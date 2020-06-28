@@ -18,12 +18,12 @@
 let passwordLength= 10
 console.log(passwordLength);
 
-let useUppercase = prompt("Want to generate a random paswword? Type 'Yes' tp continue!");
+// let useUppercase = prompt("Want to generate a random paswword? Type 'Yes' tp continue!");
 console.log(useUppercase)
 
-if(useUppercase === 'Yes'){
-    choices = choices + useUppercaseChars;
-} else {
-    prompt("Oops! Prompt Console is cAsE sEnSiTiVe... feel free to enter any characters to continue or Press 'Ok'.");
-}
+// if(useUppercase === 'Yes'){
+//     choices = choices + useUppercaseChars;
+// } else {
+//     prompt("Oops! Prompt Console is cAsE sEnSiTiVe... feel free to enter any characters to continue or Press 'Ok'.");
+// }
 
