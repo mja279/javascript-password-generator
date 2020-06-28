@@ -30,20 +30,21 @@
       <div class="col-md-8 themed-grid-col mx-auto">
       <div class="pb-3"> Select the length for strength:  
         <br />
-        <input type="range" min="0" max="50" name="slider" id="slider">
+        <input onclick="sliderValue()" type="range" min="8" max="128" name="slider" id="slider">
+        <div id="length"></div>
       </div>
 <!-- Row 1 -->
       <div class="row">
         <div class="col-md-6 themed-grid-col mx-auto">
-          <div class="form-group form-check" >
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Include Uppercase Characters (e.g. ABC)</label>
+          <div id="passwordGeneratorForm" class="form-group form-check" >
+            <input type="checkbox" class="form-check-input" id="includeUppercase" checked>
+              <label class="form-check-label" for="includeUppercase">Include Uppercase Characters (e.g. ABC)</label>
            </div>
         </div>
         <div class="col-md-6 themed-grid-col">
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-              <label class="form-check-label" for="exampleCheck2">Include Numbers (e.g. 123)</label>
+            <input type="checkbox" class="form-check-input" id="includeNumbers" checked>
+              <label class="form-check-label" for="includeNumbers">Include Numbers (e.g. 123)</label>
           </div>
         </div>
       </div>
@@ -51,27 +52,19 @@
       <div class="row">
         <div class="col-md-6 themed-grid-col">
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck4">
-              <label class="form-check-label" for="exampleCheck4">Include Lowercase Characters (e.g. abc)</label>
+            <input type="checkbox" class="form-check-input" id="includeLowercase" checked>
+              <label class="form-check-label" for="includeLowercase">Include Lowercase Characters (e.g. abc)</label>
           </div>
         </div>
         <div class="col-md-6 themed-grid-col">
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck4">
-              <label class="form-check-label" for="exampleCheck4">Include Symbols (e.g. @#$% )</label>
+            <input type="checkbox" class="form-check-input" id="includeSymbols" checked>
+              <label class="form-check-label" for="includeSymbols">Include Symbols (e.g. @#$% )</label>
           </div>
         </div>
       </div>
-<!-- Row 3  -->
-      <div class="row">
-        <div class="col-md-12 themed-grid-col">
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck5">
-             <label class="form-check-label" for="exampleCheck5">Exclude Similar Characters (e.g. i, l, 1, L, o, 0, O )</label>
-          </div>
-        </div>     
-      </div>
-<!-- Row 4; Copy to Clipboard Button -->
+
+<!-- Copy to Clipboard Button -->
       <br />
       <button id="button2" onclick="copyPassword()">Copy to Clipboard</button>
     </div>
@@ -91,12 +84,7 @@
 </div>
    
        
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-<!-- homemade javvy sauce-->
+<!-- Homemade javvy sauce-->
 <script src="script.js"></script>
 
  </body>

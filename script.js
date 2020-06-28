@@ -1,37 +1,40 @@
-// get password length
-// character types: upper case, lower, numbers, special characters
+//slider
+    var complexity = document.getElementById("slider").value;
+    document.getElementById("length").innerHTML = "Length: " + complexity;
 
-// need to validate input
-// if min character set selecte
-//      if (choicesMade){
-//      generatePassword
-//      } else{
-//    console.log("character criteria not met")
-//      }
+// document.getElementById("length").innerHTML = "Length: " + complexity;
+function sliderValue(){
+     complexity = document.getElementById("slider").value;
+     document.getElementById("length").innerHTML = "Length: " + complexity;
+}       
 
-// generate password
-// get the charactersets
-//randomly select characters to make PW of X length
-
-// display the PW
-
-let passwordLength= 10
-console.log(passwordLength);
-
-// let useUppercase = prompt("Want to generate a random paswword? Type 'Yes' tp continue!");
-console.log(useUppercase)
-
-// if(useUppercase === 'Yes'){
-//     choices = choices + useUppercaseChars;
-// } else {
-//     prompt("Oops! Prompt Console is cAsE sEnSiTiVe... feel free to enter any characters to continue or Press 'Ok'.");
-// }
-
+  
+//pw generator    
 function generate(){
-    let complexity = document.getElementById("slider").value;
 
-    // possible pw values
-    let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+    //checkbox options
+    var includeUppercase = document.getElementById("includeUppercase").checked;
+    var includeLowercase = document.getElementById("includeLowercase").checked;
+    var includeNumbers = document.getElementById("includeNumbers").checked;
+    var includeSymbols = document.getElementById("includeSymbols").checked;
+    
+    let values = "";
+
+    if(includeUppercase == true){
+        values += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+
+    if(includeLowercase == true){
+        values += "abcdefghijklmnopqrstuvwxyz";
+    }
+
+    if(includeNumbers == true){
+        values += "1234567890";
+    }
+
+    if(includeSymbols == true){
+        values += "!@#$%^&*()_+-=`~";
+    }
 
     let password = "";
 
@@ -40,18 +43,19 @@ function generate(){
         password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length -1)));
     }
 
-    //add pw to textbox/display area
+    //add pw to display area
     document.getElementById("display").value = password;
 
-    //add pw to prev generated pw section
+    //add pw to prev generated pw section 
     document.getElementById("lastNums").innerHTML += password + "<br />";
+
 }
 
-    //copy to clipboard bootstrap button
-    function copyPassword(){
-        document.getElementById("display").select();
+//copy to clipboard button
+function copyPassword(){
+    document.getElementById("display").select();
 
-        document.execCommand("Copy");
+    document.execCommand("Copy");
 
-        alert("Password copied to clipboard!");
-    }
+    alert("Password has been copied to clipboard!");
+}
