@@ -9,105 +9,109 @@
     
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
        
-       <link rel="stylesheet" href="/stylesheet.css"/>
+       <link rel="stylesheet" href="stylesheet.css">
 
  </head>
 
  <body>
-
+<!-- Jumbotron Banner -->
   <div class="jumbotron">
     <h1 class="display-4">Easy Password Generator</h1>
     <p class="lead">Create secure, trusted passwords. </p>
     <hr class="my-4">
     <p>Generate random passwords to provide a higher level of security.</p>
    </div>
+ 
+<!-- Nested Columns -->
+  <div class="container">
 
-    <div class="container bg-light mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-12 d-flex flex-column justify-content-center">
-                
-    <div class="wrapper">
-      <header>
-        <h1>Random Password Generator</h1>
-      </header>
-      
-       <br />
-       
-        <div class="mx-auto">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Password Length
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">5 (Weak)</a>
-              <a class="dropdown-item" href="#">15 (Strong)</a>
-              <a class="dropdown-item" href="#">20 (Wowza)</a>
-            </div>
+    <div class="row mb-3">
+
+      <div class="col-md-8 themed-grid-col mx-auto">
+      <div class="pb-3">
+        <!-- Split dropright button -->
+        <div class="btn-group dropright">
+          <button type="button" class="btn btn-secondary">
+          Password Length
+          </button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Toggle Dropright</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">5 (Weak)</a>
+            <a class="dropdown-item" href="#">16 (Strong)</a>
+            <a class="dropdown-item" href="#">27 (Wowza)</a>
           </div>
         </div>
-
-        <div class="dropdown-divider"></div>
-          <div class = "container-md">
-            <div class = "row">
-            <div class = "col-md-12">
-             <!-- Check Box Options. -->
-              <div class="form-group form-check" >
-               <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                 <label class="form-check-label" for="exampleCheck1">Include Symbols ( e.g. @#$% )</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                  <label class="form-check-label" for="exampleCheck2">Include Numbers ( e.g. 123456)</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                  <label class="form-check-label" for="exampleCheck3">Include Lowercase Characters ( e.g. abcdefgh)</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                  <label class="form-check-label" for="exampleCheck4">Include Uppercase Characters ( e.g. ABCDEFGH)</label>
-              </div> 
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck5">
-                 <label class="form-check-label" for="exampleCheck5">Exclude Similar Characters ( e.g. i, l, 1, L, o, 0, O )</label>
-              </div>
-            </div>
-            </div>
-          </div>
-        <div class="card-footer">
-            <div class="btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary active">
-                <input type="checkbox" checked> Copy to Clipboard
-              </label>
+      </div>
+<!-- Row 1 -->
+      <div class="row">
+        <div class="col-md-6 themed-grid-col mx-auto">
+          <div class="form-group form-check" >
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Include Uppercase Characters (e.g. ABC)</label>
+           </div>
+        </div>
+        <div class="col-md-6 themed-grid-col">
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+              <label class="form-check-label" for="exampleCheck2">Include Numbers (e.g. 123)</label>
           </div>
         </div>
-      
+      </div>
+<!-- Row 2 -->
+      <div class="row">
+        <div class="col-md-6 themed-grid-col">
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck4">
+              <label class="form-check-label" for="exampleCheck4">Include Lowercase Characters (e.g. abc)</label>
+          </div>
+        </div>
+        <div class="col-md-6 themed-grid-col">
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck4">
+              <label class="form-check-label" for="exampleCheck4">Include Symbols (e.g. @#$% )</label>
+          </div>
+        </div>
+      </div>
+<!-- Row 3  -->
+      <div class="row">
+        <div class="col-md-12 themed-grid-col">
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck5">
+             <label class="form-check-label" for="exampleCheck5">Exclude Similar Characters (e.g. i, l, 1, L, o, 0, O )</label>
+          </div>
+        </div>     
+      </div>
+<!-- Row 4; Copy to Clipboard Button -->
+      <br />
+      <div class="btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="checkbox" checked> Copy to Clipboard
+        </label>
+      </div>
     </div>
-  </div>
+    <div class="col-md-4 themed-grid-col">generated pw will go here
+      <br />
+      <div id="lastNums"></div>
+    </div>
 
-    
+  </div> 
+
+</div>
+   
+       
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-<!-- homemade javvy-->
+<!-- homemade javvy sauce-->
 <script src="script.js"></script>
 
  </body>
 
  <!--Footer-->
-<style>
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #2e1b36c4;
-    color: white;
-    text-align: center;
-  }
-</style>
 <div class="footer">
   <p>
       &copy; Last updated: 6/28/20 by M. Alvarez
