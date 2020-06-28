@@ -19,6 +19,8 @@ https://www.w3schools.com/css/
 
 SUBMISSION:
 * The URL of the deployed application:
+https://mja279.github.io/javascript-password-generator/
 
 
 * The URL of the GitHub repository:
+https://github.com/mja279/javascript-password-generator.git
