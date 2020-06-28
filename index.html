@@ -14,6 +14,14 @@
  </head>
 
  <body>
+
+  <div class="jumbotron">
+    <h1 class="display-4">Easy Password Generator</h1>
+    <p class="lead">Create secure, trusted passwords. </p>
+    <hr class="my-4">
+    <p>Generate random passwords to provide a higher level of security.</p>
+   </div>
+
     <div class="container bg-light mt-5">
         <div class="row justify-content-center">
             <div class="col-md-12 d-flex flex-column justify-content-center">
@@ -22,13 +30,11 @@
       <header>
         <h1>Random Password Generator</h1>
       </header>
-      <div class="card">
-        <div class="card-header" >
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="dropdown-divider"></div>      
-        <div class="mx-auto" style="width: 100%;">
-        <div class="dropdown">
+      
+       <br />
+       
+        <div class="mx-auto">
+          <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Password Length
             </button>
@@ -39,44 +45,45 @@
             </div>
           </div>
         </div>
-        <br />
+
         <div class="dropdown-divider"></div>
           <div class = "container-md">
             <div class = "row">
             <div class = "col-md-12">
              <!-- Check Box Options. -->
-          <div class="form-group form-check" >
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Include Symbols ( e.g. @#$% )</label>
+              <div class="form-group form-check" >
+               <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                 <label class="form-check-label" for="exampleCheck1">Include Symbols ( e.g. @#$% )</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                  <label class="form-check-label" for="exampleCheck2">Include Numbers ( e.g. 123456)</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                  <label class="form-check-label" for="exampleCheck3">Include Lowercase Characters ( e.g. abcdefgh)</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                  <label class="form-check-label" for="exampleCheck4">Include Uppercase Characters ( e.g. ABCDEFGH)</label>
+              </div> 
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck5">
+                 <label class="form-check-label" for="exampleCheck5">Exclude Similar Characters ( e.g. i, l, 1, L, o, 0, O )</label>
+              </div>
+            </div>
+            </div>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-            <label class="form-check-label" for="exampleCheck2">Include Numbers ( e.g. 123456)</label>
+        <div class="card-footer">
+            <div class="btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="checkbox" checked> Copy to Clipboard
+              </label>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck3">
-            <label class="form-check-label" for="exampleCheck3">Include Lowercase Characters ( e.g. abcdefgh)</label>
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck4">
-            <label class="form-check-label" for="exampleCheck4">Include Uppercase Characters ( e.g. ABCDEFGH)</label>
-           </div> 
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck5">
-            <label class="form-check-label" for="exampleCheck5">Exclude Similar Characters ( e.g. i, l, 1, L, o, 0, O )</label>
-          </div>
-
-          <div class="card-footer">
-          <button onclick=""> Copy to Clipboard</button>
-          <!-- BOOTSTRAP BUTTON: <button id="copy" class="btn">Copy to Clipboard</button> -->
         </div>
-        </div>
-          
-      </div>
+      
     </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
     
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -88,6 +95,25 @@
 <script src="script.js"></script>
 
  </body>
+
+ <!--Footer-->
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2e1b36c4;
+    color: white;
+    text-align: center;
+  }
+</style>
+<div class="footer">
+  <p>
+      &copy; Last updated: 6/28/20 by M. Alvarez
+  </p>
+</div>
+
 </html>
 
 
